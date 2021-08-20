@@ -3,14 +3,19 @@ package com.bridgelabz.employeewagecalculator;
 public class employeewagecalculator {
 
 	public static void main(String[] args) {
-		final int FULL = 1;
-        final int WagePH = 30;
-        int emp = (int) (Math.random() * 100) % 2;
+		int PART = 1;
+        int FULL = 2;
+        int WagePH = 20;
+        int empType = (int) (Math.random() * 100) % 3;
         int workingHours = 0;
-        if (emp == FULL)
+        if (empType == FULL)
         {
-            System.out.println("Employee is Present");
+            System.out.println("Employee is Present Full time");
             workingHours = 8;
+        } else if (empType == PART)
+        {
+            System.out.println("Employee is Present Part time");
+            workingHours = 4;
         } else
         {
             System.out.println("Employee is Absent");
