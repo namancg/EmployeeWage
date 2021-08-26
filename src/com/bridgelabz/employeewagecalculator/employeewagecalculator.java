@@ -1,15 +1,10 @@
-package com.bridgelabz.employeewagecalculator;
-
-public class employeewagecalculator {
-
-	
-		private static final int PART_TIME=2;
+private static final int PART_TIME=2;
 		private static final int FULL_TIME=1;
 		private static final int EMP_RATE_PER_HOUR = 20;
 		private static final int NUM_WORKING_DAYS = 20;
 		private static final int MAX_WORK_HRS = 100;
 		
-		public static void main(String[] args) {
+		public static int computeEmployeeWage() {
 			
 			int empHrs = 0;
 			int total_empHrs = 0;
@@ -41,7 +36,13 @@ public class employeewagecalculator {
 			
 			int total_empWage = total_empHrs * EMP_RATE_PER_HOUR;
 			System.out.println("Total Employee Wage : "+total_empWage);
-
-	}
+			return total_empWage;
+		}
+			
+			public static void main(String args[]) {
+				int totalWage = computeEmployeeWage();
+				System.out.println("Total Emp Wage: " + totalWage );
+			}
 
 }
+
