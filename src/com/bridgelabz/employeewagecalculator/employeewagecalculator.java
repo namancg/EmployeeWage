@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package com.bridgelabz.employeewagecalculator;
 
 public class employeewagecalculator {
@@ -16,6 +17,15 @@ public class employeewagecalculator {
 		int total_workingDays = 0;
 		
 		while(total_empHrs <= MAX_WORK_HRS && total_workingDays < NUM_WORKING_DAYS) {
+=======
+private static final int PART_TIME=2;
+		private static final int FULL_TIME=1;
+		private static final int EMP_RATE_PER_HOUR = 20;
+		private static final int NUM_WORKING_DAYS = 20;
+		private static final int MAX_WORK_HRS = 100;
+		
+		public static int computeEmployeeWage() {
+>>>>>>> uc7-methodsToCompute
 			
 			total_workingDays++;
 			int attendance = (int) Math.floor(Math.random()*10) %3;
@@ -35,6 +45,7 @@ public class employeewagecalculator {
 			
 			}
 			
+<<<<<<< HEAD
 			total_empHrs += empHrs;
 			System.out.println("Day"+total_workingDays+": Emp Hrs = "+empHrs);
 		}
@@ -50,3 +61,17 @@ public class employeewagecalculator {
 	}
 
 }
+=======
+			int total_empWage = total_empHrs * EMP_RATE_PER_HOUR;
+			System.out.println("Total Employee Wage : "+total_empWage);
+			return total_empWage;
+		}
+			
+			public static void main(String args[]) {
+				int totalWage = computeEmployeeWage();
+				System.out.println("Total Emp Wage: " + totalWage );
+			}
+
+}
+
+>>>>>>> uc7-methodsToCompute
